@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <header>
         <!-- title of page is-link= background-color -->
         <nav class="navbar is-link" role="navigation" aria-label="main navigation ">
 
-            <div class="is-size-3" >
-                <h3 class="navbar-item has-text-white" >
-                    Temp Title 
+            <div class="is-size-3">
+                <h3 class="navbar-item has-text-white">
+                    Temp Title
                 </h3>
             </div>
 
             <!-- Drop Down Menu -->
-            <div class="navbar-end is-size-4 has-text-white" >
+            <div class="navbar-end is-size-4 has-text-white">
                 <div class="navbar-item has-dropdown is-hoverable is-right">
                     <a class="navbar-link">
-                        My Lists 
+                        My Lists
                     </a>
 
                     <div class=" navbar-dropdown is-right">
-                        <a class="navbar-item"> a list  1</a> <!-- Example only --> 
-                        <a class="navbar-item"> a list 2 </a>  <!-- Example only -->
+                        <a class="navbar-item"> a list 1</a> <!-- Example only -->
+                        <a class="navbar-item"> a list 2 </a> <!-- Example only -->
                         <hr class="navbar-divider">
                         <button class="navbar-item button is-normal is-responsive">
                             Create New List <!-- need to add event listner -->
@@ -74,25 +76,50 @@
     
         </aside>
     
-        <section>
+        
     
     
     
             <!-- search results -->
-            <div>
-    
+    <section class="results">
+
+
+        <div class="columns">
+
+            <img class="column poster" src="assets/placeholder-image/thejoker-action-batman-movie.jpg"
+                alt="movie poster">
+
+
+            <div class="column description">
+                <p>Joker (2019 film) Set in 1981, it follows Arthur Fleck, a failed clown and aspiring stand-up comic
+                    whose descent into mental illness and nihilism inspires a violent countercultural revolution against
+                    the wealthy in a decaying Gotham City. Robert De Niro, Zazie Beetz and Frances Conroy appear in
+                    supporting roles.</p>
+                <h4>Available on prime <span>&#10003;</span></h4>
             </div>
+
+            <div class="column trailer">
+                <div>
+                    <a href="https://www.youtube.com/watch?v=zAGVQLHvwOY">Watch trailer</a>
+                    <button>Add to list</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
         </section>
     </div>
 
 
 </body>
-    <footer>
-        <!-- not sure if footer needed? -->
-    </footer>
+<footer>
+    <!-- not sure if footer needed? -->
+</footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
-    crossorigin="anonymous"></script>
-    <script src="./assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
 </body>
+
 </html>
