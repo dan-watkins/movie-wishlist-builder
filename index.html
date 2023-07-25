@@ -37,29 +37,37 @@
             </div>
         </nav>
     </header>
-    <section class="section columns container">
-        <div class="column"> 
-            <input class="input is-normal" type="text" id="input-search" placeholder=" Movie Title...">
-            <button class="button is-inline" type="submit" id="movie-search">Search</button>
-        </div>
+    <section class="section columns">
         <div class="column">
-        <label for="genre">Genre:</label>
-        <select name="genre" id="genre">
-            
-            <option class="checkbox" type="checkbox" value="action">action</option>
-            <option value="comedy">Comedy</option>
-            <option value="drama">Drama</option>
-            <option value="horror">Horror</option>
-            <option value="sci-fi">Sci-fi</option>
-        </select>
-    </div>
+            <input class="input is-normal" type="text" id="input-search" placeholder=" Movie Title...">
+            <button class="button" type="submit" id="movie-search">Search</button>
+        </div>
     </section>
 
 
-    <aside>
-        <!-- main movie list -->
-        <div>
-
+    <aside class="box">
+        <div class="mb-5">
+            <h2>Current List</h2>
+        </div>
+      <!-- more of these can be created when item is saved -->
+    <article class="media box">
+        <figure class="media-left">
+            <p class="image is-64x64">
+                <img src="./assets/images/placeholder.jpeg" alt="movie img">
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="content">
+                <p id="movieTitle">
+                    <strong>Movie Title</strong>
+                </p>    
+                <p id="movieDescription">
+                    Movie Description
+                </p>
+            </div>
+        </div>
+        <div class="media-right">
+            <button class="delete"></button>
         </div>
     </article>
 
