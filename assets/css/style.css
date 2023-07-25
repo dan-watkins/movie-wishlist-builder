@@ -1,0 +1,27 @@
+
+
+.poster {
+    margin: 0 auto;
+    width: 280px;
+    
+}
+
+.description p, .description h4 {
+    margin: 0 auto;
+    padding: 0 1rem 1rem;
+}
+
+.description span {
+    color: rgb(18, 219, 18); 
+}
+
+
+.trailer button {
+    margin:  1rem auto;
+    width: 30%;
+    
+}
+
+.trailer a {
+    display: block;
+}
