@@ -47,41 +47,47 @@
     </section>
 
 
-    <aside>
-        <!-- main movie list -->
-        <div>
-
-        </div>
-    </aside>
-
-    <!-- search results -->
-    <section class="results">
-
-
-        <div class="columns">
-
-            <img class="column poster" src="assets/placeholder-image/thejoker-action-batman-movie.jpg"
-                alt="movie poster">
-
-
-            <div class="column description">
-                <p>Joker (2019 film) Set in 1981, it follows Arthur Fleck, a failed clown and aspiring stand-up comic
-                    whose descent into mental illness and nihilism inspires a violent countercultural revolution against
-                    the wealthy in a decaying Gotham City. Robert De Niro, Zazie Beetz and Frances Conroy appear in
-                    supporting roles.</p>
-                <h4>Available on prime <span>&#10003;</span></h4>
+    <div class="columns">
+        <aside class="box is-one-third ml-5">
+            <div class="mb-5">
+                <h2 class="has-text-weight-bold">Current Movie List</h2>
             </div>
-
-            <div class="column trailer">
-                <div>
-                    <a href="https://www.youtube.com/watch?v=zAGVQLHvwOY">Watch trailer</a>
-                    <button>Add to list</button>
+            <!-- more of these can be created when item is saved -->
+            <article class="media box">
+                <figure class="media-left">
+                    <p class="image is-128x128">
+                        <img id="posterImage" src="./assets/images/placeholder.jpeg" alt="movie img">
+                    </p>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <p id="titleOfMovie">
+                            <strong>Movie Title</strong>
+                        </p>
+                        <p id="movieDescription">
+                            Movie Description
+                        </p>
+                    </div>
                 </div>
+                <div class="media-right">
+                    <button class="delete"></button>
+                </div>
+            </article>
+    
+        </aside>
+    
+        <section>
+    
+    
+    
+            <!-- search results -->
+            <div>
+    
             </div>
+        </section>
+    </div>
 
-        </div>
 
-    </section>
 </body>
 <footer>
     <!-- not sure if footer needed? -->
