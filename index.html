@@ -45,46 +45,47 @@
     </section>
 
 
-    <aside class="box">
-        <div class="mb-5">
-            <h2>Current List</h2>
-        </div>
-      <!-- more of these can be created when item is saved -->
-    <article class="media box">
-        <figure class="media-left">
-            <p class="image is-64x64">
-                <img src="./assets/images/placeholder.jpeg" alt="movie img">
-            </p>
-        </figure>
-        <div class="media-content">
-            <div class="content">
-                <p id="movieTitle">
-                    <strong>Movie Title</strong>
-                </p>    
-                <p id="movieDescription">
-                    Movie Description
-                </p>
+    <div class="columns">
+        <aside class="box is-one-third ml-5">
+            <div class="mb-5">
+                <h2 class="has-text-weight-bold">Current Movie List</h2>
             </div>
-        </div>
-        <div class="media-right">
-            <button class="delete"></button>
-        </div>
-    </article>
+            <!-- more of these can be created when item is saved -->
+            <article class="media box">
+                <figure class="media-left">
+                    <p class="image is-128x128">
+                        <img id="posterImage" src="./assets/images/placeholder.jpeg" alt="movie img">
+                    </p>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <p id="titleOfMovie">
+                            <strong>Movie Title</strong>
+                        </p>
+                        <p id="movieDescription">
+                            Movie Description
+                        </p>
+                    </div>
+                </div>
+                <div class="media-right">
+                    <button class="delete"></button>
+                </div>
+            </article>
+    
+        </aside>
+    
+        <section>
+    
+    
+    
+            <!-- search results -->
+            <div>
+    
+            </div>
+        </section>
+    </div>
 
-    </aside>
 
-    <section>
-        <!-- search criteria -->
-        <div>
-
-        </div>
-
-
-        <!-- search results -->
-        <div>
-
-        </div>
-    </section>
 </body>
     <footer>
         <!-- not sure if footer needed? -->
