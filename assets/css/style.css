@@ -6,14 +6,16 @@
     
 }
 
-.description p, .description h4 {
-    margin: 0 auto;
-    padding: 0 1rem 1rem;
+.description  {
+    margin: 1rem;
+    padding: 1rem;
 }
 
-.description span {
+
+
+/* .description span {
     color: rgb(18, 219, 18); 
-}
+} */
 
 
 .trailer button {
