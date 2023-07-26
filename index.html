@@ -24,7 +24,6 @@
                     <a class="navbar-link">
                         My Lists 
                     </a>
-
                     <div class=" navbar-dropdown is-right">
                         <a class="navbar-item"> a list  1</a> <!-- Example only --> 
                         <a class="navbar-item"> a list 2 </a>  <!-- Example only -->
@@ -38,9 +37,24 @@
         </nav>
     </header>
     <section class="section columns">
+      
         <div class="column">
             <input class="input is-normal" type="text" id="input-search" placeholder=" Movie Title...">
+        </div>
+        <div class="column">
             <button class="button" type="submit" id="movie-search">Search</button>
+        </div>
+   
+        
+        <div class="column">
+            <label for="genre">Genre:</label>
+            <select name="genre" id="genre">
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="horror">Horror</option>
+                <option value="sci-fi">Sci-fi</option>
+            </select>
         </div>
     </section>
 
