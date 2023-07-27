@@ -1,199 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Wishlist</title>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-   <link rel = "stylesheet" href="https://kit.fontawesome.com/e0d0d5f37f.js" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Wishlist</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/e0d0d5f37f.js" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
+
 <body>
-    <header>
-        <!-- title of page is-link= background-color -->
-        <nav class="navbar is-link" role="navigation" aria-label="main navigation ">
+  <header>
+    <!-- title of page is-link= background-color -->
+    <nav class="navbar is-link" role="navigation" aria-label="main navigation ">
 
-            <div class="is-size-3">
-                <h3 class="navbar-item has-text-white">
-                    Temp Title
-            <div class="is-size-3">
-                <h3 class="navbar-item has-text-white">
-                    Temp Title
-                </h3>
-            </div>
+      <div class="is-size-3">
+        <h3 class="navbar-item has-text-white">Temp Title</h3>
 
-            <!-- Drop Down Menu -->
-            <div class="navbar-end is-size-4 has-text-white">
-                <div class="navbar-item has-dropdown is-hoverable is-right">
-                    <a class="navbar-link">
-                        My Lists
-                    </a>
+      </div>
 
-                    <div class=" navbar-dropdown is-right">
-                        <a class="navbar-item"> a list 1</a> <!-- Example only -->
-                        <a class="navbar-item"> a list 2 </a> <!-- Example only -->
-                        <hr class="navbar-divider">
-                        <button class="navbar-item button is-normal is-responsive">
-                            Create New List <!-- need to add event listner -->
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <section class="section columns">
-        <div class="column">
-            <input class="input is-normal" type="text" id="input-search" placeholder=" Movie Title...">
-        </div>
-        <div class="column">
-            <button class="button" type="submit" id="movie-search">Search</button>
-        </div>
-        <div class="dropdown is-hoverable column">
-            <div class="dropdown-trigger">
-              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                <span>Genre</span>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-              <div class="dropdown-content">
-                <a id="action" value="action" class="dropdown-item">
-                  Action
-                </a>
-                <a id="comedy" value="comedy" class="dropdown-item">
-                    Comedy
-                </a>
-                <a id="drama" value="drama" class="dropdown-item">
-                    Drama
-                </a>
-                <a id="horror" value="horror" class="dropdown-item">
-                    Horror
-                </a>
-                <a id="sci-fi" value="sci-fi" class="dropdown-item">
-                    Sci-fi
-                </a>
-              </div>
-            </div>
+      <div class="navbar-end is-size-4 has-text-white">
+        <div class="navbar-brand">
+          <!-- navbar items, navbar burger... -->
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+
+          <div class="navbar-menu" id="navMenu">
+            <!-- navbar-start, navbar-end... -->
+            <a class="mr-5 has-text-white" href="list1.html">List 1</a>
+            <a class="mr-5 has-text-white" href="list2.html">List 2</a>
+            <a class="mr-5 has-text-white" href="list3.html">List 3</a>
           </div>
-          <div class="dropdown  is-hoverable column">
-            <div class="dropdown-trigger">
-              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                <span>Streaming Service</span>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-              <div class="dropdown-content">
-                <a id="amazon" value="amazon" class="dropdown-item">
-                  Amazon Prime Video
-                </a>
-                <a id="disney" value="disney" class="dropdown-item">
-                  Disney +
-                </a>
-                <a id="hbo" value="hbo" class="dropdown-item">
-                  HBO Max
-                </a>
-                <a id="netflix" value="netflix" class="dropdown-item">
-                  Netflix
-                </a>
-              </div>
-            </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <section class="section columns">
+    <div class="column">
+      <input class="input is-normal" type="text" id="input-search" placeholder=" Movie Title...">
+    </div>
+    <div class="column">
+      <button class="button" type="submit" id="movie-search">Search</button>
+    </div>
+    <div class="dropdown is-hoverable column">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+          <span>Genre</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+        <div class="dropdown-content">
+          <a id="action" value="action" class="dropdown-item">
+            Action
+          </a>
+          <a id="comedy" value="comedy" class="dropdown-item">
+            Comedy
+          </a>
+          <a id="drama" value="drama" class="dropdown-item">
+            Drama
+          </a>
+          <a id="horror" value="horror" class="dropdown-item">
+            Horror
+          </a>
+          <a id="sci-fi" value="sci-fi" class="dropdown-item">
+            Sci-fi
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown  is-hoverable column">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+          <span>Streaming Service</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+        <div class="dropdown-content">
+          <a id="amazon" value="amazon" class="dropdown-item">
+            Amazon Prime Video
+          </a>
+          <a id="disney" value="disney" class="dropdown-item">
+            Disney +
+          </a>
+          <a id="hbo" value="hbo" class="dropdown-item">
+            HBO Max
+          </a>
+          <a id="netflix" value="netflix" class="dropdown-item">
+            Netflix
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="columns">
+    <aside class="box is-one-third ml-5">
+      <div class="mb-5">
+        <h2 class="has-text-weight-bold">Current Movie List</h2>
+      </div>
+      <!-- more of these can be created when item is saved -->
+      <article class="media box">
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img id="posterImage" src="./assets/images/placeholder.jpeg" alt="movie img">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p id="titleOfMovie">
+              <strong>Movie Title</strong>
+            </p>
+            <p id="movieDescription">
+              Movie Description
+            </p>
           </div>
-    </section>
+        </div>
+        <div class="media-right">
+          <button class="delete"></button>
+        </div>
+      </article>
+
+    </aside>
 
 
-    <div class="columns">
-        <aside class="box is-one-third ml-5">
-            <div class="mb-5">
-                <h2 class="has-text-weight-bold">Current Movie List</h2>
-            </div>
-            <!-- more of these can be created when item is saved -->
-            <article class="media box">
-                <figure class="media-left">
-                    <p class="image is-128x128">
-                        <img id="posterImage" src="./assets/images/placeholder.jpeg" alt="movie img">
-                    </p>
-                </figure>
-                <div class="media-content">
-                    <div class="content">
-                        <p id="titleOfMovie">
-                            <strong>Movie Title</strong>
-                        </p>
-                        <p id="movieDescription">
-                            Movie Description
-                        </p>
-                    </div>
-                </div>
-                <div class="media-right">
-                    <button class="delete"></button>
-                </div>
-            </article>
-    
-        </aside>
-    
-        
-    
-    
-    
-            <!-- search results -->
+
+
+
+    <!-- search results -->
     <section class="results">
 
 
-        <div class="columns">
+      <div class="columns">
 
-            <img id="moviePoster" class="column poster" src="assets/placeholder-image/thejoker-action-batman-movie.jpg"
-                alt="movie poster">
+        <img id="moviePoster" class="column poster" src="assets/placeholder-image/thejoker-action-batman-movie.jpg"
+          alt="movie poster">
 
 
-            <div id="description" class="column description">
-                <p>Joker (2019 film) Set in 1981, it follows Arthur Fleck, a failed clown and aspiring stand-up comic
-                    whose descent into mental illness and nihilism inspires a violent countercultural revolution against
-                    the wealthy in a decaying Gotham City. Robert De Niro, Zazie Beetz and Frances Conroy appear in
-                    supporting roles.</p>
-                
-                <div class="icon-text is-flex is-flex-wrap-nowrap">
-                    <span>Available on prime</span>
-                    <span class="icon has-text-success">
-                      <i class="fas fa-check-square"></i>
-                    </span>
-                </div>
-            </div>
+        <div id="description" class="column description">
+          <p>Joker (2019 film) Set in 1981, it follows Arthur Fleck, a failed clown and aspiring stand-up comic
+            whose descent into mental illness and nihilism inspires a violent countercultural revolution against
+            the wealthy in a decaying Gotham City. Robert De Niro, Zazie Beetz and Frances Conroy appear in
+            supporting roles.</p>
 
-            <div id="trailer" class="column trailer">
-                <div>
-                    <a href="https://www.youtube.com/watch?v=zAGVQLHvwOY">Watch trailer</a>
-                    <button>Add to list</button>
-                </div>
-            </div>
-
+          <div class="icon-text is-flex is-flex-wrap-nowrap">
+            <span>Available on prime</span>
+            <span class="icon has-text-success">
+              <i class="fas fa-check-square"></i>
+            </span>
+          </div>
         </div>
 
+        <div id="trailer" class="column trailer">
+          <div>
+            <a href="https://www.youtube.com/watch?v=zAGVQLHvwOY">Watch trailer</a>
+            <button>Add to list</button>
+          </div>
+        </div>
+
+      </div>
+
     </section>
-        </section>
-    </div>
+    </section>
+  </div>
 
 
-        </section>
-    </div>
+  </section>
+  </div>
 
 
 </body>
 <footer>
-    <!-- not sure if footer needed? -->
+  <!-- not sure if footer needed? -->
 </footer>
-<footer>
-    <!-- not sure if footer needed? -->
-</footer>
+
 
 <script src="https://kit.fontawesome.com/a7404b1ef7.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
