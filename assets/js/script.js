@@ -1,5 +1,6 @@
 var movieTitle = document.getElementById("input-search");
 var movieSearch = document.getElementById("movie-search");
+var results = document.getElementsByClassName("results");
 
 function inputEventHandler() {
     if (!movieTitle.value) {
@@ -20,6 +21,17 @@ function omdbApi() {
             }
         }
         )
+        .then(function (data) {
+            displayMovies(data);
+        })
+        return;
+};
+
+function displayMovies(data) {
+    var moviePoster = data.Poster;
+    var movieDesc = data.Plot;
+    document.getElementById("moviePoster").src = moviePoster;
+    document.getElementById("description").innerHTML = "<p>" + movieDesc + "</p>";
 };
 
 movieSearch.addEventListener('click', inputEventHandler);
