@@ -23,7 +23,7 @@ function omdbApi() {
         )
         .then(function (data) {
             displayMovies(data);
-			rapidAPI();
+			rapidAPI(data);
         })
         return;
 };
@@ -49,7 +49,7 @@ const options = {
 
 
 
-function rapidAPI() {
+function rapidAPI(imdbData) {
 	var rapidRequestUrl = "https://streaming-availability.p.rapidapi.com/v2/search/title?title=" + movieTitle.value + "&country=us&show_type=movie&output_language=en";
 	fetch(rapidRequestUrl, options)
 		.then(function (response) {
@@ -60,8 +60,16 @@ function rapidAPI() {
 			}
 		})
 		.then(function(data) {
-			console.log(data);
-			displayStreamInfo(data);
+            for (let i = 0; i < data.result.length; i++) {
+                var movieId = data.result[i].imdbId;
+                if (imdbData.imdbID == movieId) {
+                    console.log(data.result[i]);
+                    displayStreamInfo(data.result[i]);
+                    return;
+                } else {
+                    console.log("no streaming results found");
+                }
+            }
 		}
 		)
 }
