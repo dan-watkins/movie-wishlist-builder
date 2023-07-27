@@ -23,6 +23,7 @@ function omdbApi() {
         )
         .then(function (data) {
             displayMovies(data);
+			rapidAPI();
         })
         return;
 };
@@ -35,3 +36,32 @@ function displayMovies(data) {
 };
 
 movieSearch.addEventListener('click', inputEventHandler);
+
+
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'a41af16ff5msh7a6c6e9df83c957p184bbajsncd5a40f520fb',
+		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+	}
+};
+
+
+
+function rapidAPI() {
+	var rapidRequestUrl = "https://streaming-availability.p.rapidapi.com/v2/search/title?title=" + movieTitle.value + "&country=us&show_type=movie&output_language=en";
+	fetch(rapidRequestUrl, options)
+		.then(function (response) {
+			if (response.status !=200) {
+				alert(respnse.status);
+			} else {
+				return response.json();
+			}
+		})
+		.then(function(data) {
+			console.log(data);
+			displayMovies(data);
+		}
+		)
+}
