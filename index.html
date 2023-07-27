@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Wishlist</title>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+   <link rel = "stylesheet" href="https://kit.fontawesome.com/e0d0d5f37f.js" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-</head>
 
+</head>
 <body>
     <header>
         <!-- title of page is-link= background-color -->
         <nav class="navbar is-link" role="navigation" aria-label="main navigation ">
 
+            <div class="is-size-3">
+                <h3 class="navbar-item has-text-white">
+                    Temp Title
             <div class="is-size-3">
                 <h3 class="navbar-item has-text-white">
                     Temp Title
@@ -42,8 +46,65 @@
     <section class="section columns">
         <div class="column">
             <input class="input is-normal" type="text" id="input-search" placeholder=" Movie Title...">
+        </div>
+        <div class="column">
             <button class="button" type="submit" id="movie-search">Search</button>
         </div>
+        <div class="dropdown is-hoverable column">
+            <div class="dropdown-trigger">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                <span>Genre</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+              <div class="dropdown-content">
+                <a id="action" value="action" class="dropdown-item">
+                  Action
+                </a>
+                <a id="comedy" value="comedy" class="dropdown-item">
+                    Comedy
+                </a>
+                <a id="drama" value="drama" class="dropdown-item">
+                    Drama
+                </a>
+                <a id="horror" value="horror" class="dropdown-item">
+                    Horror
+                </a>
+                <a id="sci-fi" value="sci-fi" class="dropdown-item">
+                    Sci-fi
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown  is-hoverable column">
+            <div class="dropdown-trigger">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                <span>Streaming Service</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+              <div class="dropdown-content">
+                <a id="amazon" value="amazon" class="dropdown-item">
+                  Amazon Prime Video
+                </a>
+                <a id="disney" value="disney" class="dropdown-item">
+                  Disney +
+                </a>
+                <a id="hbo" value="hbo" class="dropdown-item">
+                  HBO Max
+                </a>
+                <a id="netflix" value="netflix" class="dropdown-item">
+                  Netflix
+                </a>
+              </div>
+            </div>
+          </div>
     </section>
 
 
@@ -118,7 +179,14 @@
     </div>
 
 
+        </section>
+    </div>
+
+
 </body>
+<footer>
+    <!-- not sure if footer needed? -->
+</footer>
 <footer>
     <!-- not sure if footer needed? -->
 </footer>
@@ -128,5 +196,4 @@
     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script src="./assets/js/script.js"></script>
 </body>
-
 </html>
