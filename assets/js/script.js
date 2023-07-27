@@ -23,7 +23,6 @@ function omdbApi() {
         )
         .then(function (data) {
             displayMovies(data);
-			rapidAPI();
         })
         return;
 };
@@ -38,30 +37,26 @@ function displayMovies(data) {
 movieSearch.addEventListener('click', inputEventHandler);
 
 
+//hamburger menu
 
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'a41af16ff5msh7a6c6e9df83c957p184bbajsncd5a40f520fb',
-		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
-	}
-};
+document.addEventListener('DOMContentLoaded', () => {
 
-
-
-function rapidAPI() {
-	var rapidRequestUrl = "https://streaming-availability.p.rapidapi.com/v2/search/title?title=" + movieTitle.value + "&country=us&show_type=movie&output_language=en";
-	fetch(rapidRequestUrl, options)
-		.then(function (response) {
-			if (response.status !=200) {
-				alert(respnse.status);
-			} else {
-				return response.json();
-			}
-		})
-		.then(function(data) {
-			console.log(data);
-			displayStreamInfo(data);
-		}
-		)
-}
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+  
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+  
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+  
+      });
+    });
+  
+  });

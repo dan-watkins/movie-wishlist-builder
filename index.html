@@ -16,31 +16,28 @@
         <nav class="navbar is-link" role="navigation" aria-label="main navigation ">
 
             <div class="is-size-3">
-                <h3 class="navbar-item has-text-white">
-                    Temp Title
-            <div class="is-size-3">
-                <h3 class="navbar-item has-text-white">
-                    Temp Title
-                </h3>
+                <h3 class="navbar-item has-text-white">Temp Title</h3>
+                    
             </div>
 
-            <!-- Drop Down Menu -->
             <div class="navbar-end is-size-4 has-text-white">
-                <div class="navbar-item has-dropdown is-hoverable is-right">
-                    <a class="navbar-link">
-                        My Lists
-                    </a>
-
-                    <div class=" navbar-dropdown is-right">
-                        <a class="navbar-item"> a list 1</a> <!-- Example only -->
-                        <a class="navbar-item"> a list 2 </a> <!-- Example only -->
-                        <hr class="navbar-divider">
-                        <button class="navbar-item button is-normal is-responsive">
-                            Create New List <!-- need to add event listner -->
-                        </button>
-                    </div>
+                <div class="navbar-brand">
+                    <!-- navbar items, navbar burger... -->
+                    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                      </a>
+                      
+                      <div class="navbar-menu" id="navMenu">
+                        <!-- navbar-start, navbar-end... -->
+                        <a class="mr-5 has-text-white" href="list1.html">List 1</a>
+                        <a class="mr-5 has-text-white" href="list2.html">List 2</a>
+                        <a class="mr-5 has-text-white" href="list3.html">List 3</a>
+                      </div>
                 </div>
-            </div>
+                    
+</div>
         </nav>
     </header>
     <section class="section columns">
