@@ -61,7 +61,7 @@ function rapidAPI() {
 		})
 		.then(function(data) {
 			console.log(data);
-			displayMovies(data);
+			displayStreamInfo(data);
 		}
 		)
 }
