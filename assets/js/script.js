@@ -65,3 +65,5 @@ function rapidAPI() {
 		}
 		)
 }
+
+//modal
