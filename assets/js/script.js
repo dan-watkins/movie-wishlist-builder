@@ -145,7 +145,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
   
 
+  function addMovie(event) {
+    var currentMovies = JSON.parse(localStorage.getItem("watchList")) || [];
+    var newMovie = {
+        title: event.target.dataset.title,
+        poster: event.target.dataset.poster,
+        plot: event.target.dataset.plot
+    };
 
+    if (currentMovies.find(function (movie) {
+        return movie.title === newMovie.title;
+    })) {
+        //add modal to inform user that the movie is already on their list
+        return;
+    }
+
+    if (movieTitle.value) {
+        currentMovies.push(newMovie);
+        localStorage.setItem("watchList", JSON.stringify(currentMovies));
+        getWatchList();
+    }
+}
 
 
 function getWatchList() {
