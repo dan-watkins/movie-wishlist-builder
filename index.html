@@ -48,32 +48,12 @@
 
 
     <div class="columns">
-        <aside class="box is-one-third ml-5">
+        <aside id="currentMovieList" class="box is-one-third ml-5">
             <div class="mb-5">
                 <h2 class="has-text-weight-bold">Current Movie List</h2>
             </div>
             <!-- more of these can be created when item is saved -->
-            <article class="media box">
-                <figure class="media-left">
-                    <p class="image is-128x128">
-                        <img id="posterImage" src="./assets/images/placeholder.jpeg" alt="movie img">
-                    </p>
-                </figure>
-                <div class="media-content">
-                    <div class="content">
-                        <p id="titleOfMovie">
-                            <strong>Movie Title</strong>
-                        </p>
-                        <p id="movieDescription">
-                            Movie Description
-                        </p>
-                    </div>
-                </div>
-                <div class="media-right">
-                    <button class="delete"></button>
-                </div>
-            </article>
-    
+     
         </aside>
     
         
@@ -101,7 +81,7 @@
             <div id="trailer" class="column trailer">
                 <div>
                     <a href="https://www.youtube.com/watch?v=zAGVQLHvwOY">Watch trailer</a>
-                    <button>Add to list</button>
+                    <button id="add">Add to list</button>
                 </div>
             </div>
 
