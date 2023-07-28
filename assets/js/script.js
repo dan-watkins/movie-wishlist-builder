@@ -1,6 +1,7 @@
 var movieTitle = document.getElementById("input-search");
 var movieSearch = document.getElementById("movie-search");
 var results = document.getElementsByClassName("results");
+var addBtn = document.getElementById("addMovie");
 
 function inputEventHandler() {
     if (!movieTitle.value) {
@@ -57,7 +58,7 @@ function rapidAPI(imdbData) {
 	fetch(rapidRequestUrl, options)
 		.then(function (response) {
 			if (response.status !=200) {
-				alert(respnse.status);
+				alert(response.status);
 			} else {
 				return response.json();
 			}
