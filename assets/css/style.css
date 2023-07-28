@@ -1,5 +1,10 @@
 
 
+.siteHeader {
+    font-family: 'Limelight', cursive;
+    background-image: url(/assets/images/header1.jpg);
+}
+
 .poster {
     margin: 0 auto;
     width: 280px;
