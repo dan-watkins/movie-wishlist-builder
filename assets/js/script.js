@@ -1,6 +1,7 @@
 var movieTitle = document.getElementById("input-search");
 var movieSearch = document.getElementById("movie-search");
 var results = document.getElementsByClassName("results");
+var addBtn = document.getElementById("addMovie");
 
 function inputEventHandler() {
     if (!movieTitle.value) {
@@ -33,6 +34,9 @@ function displayMovies(data) {
     var movieDesc = data.Plot;
     document.getElementById("moviePoster").src = moviePoster;
     document.getElementById("description").innerHTML = "<p>" + movieDesc + "</p>";
+    addBtn.setAttribute("data-poster", data.Poster);
+    addBtn.setAttribute("data-plot", data.Plot);
+    addBtn.setAttribute("data-title", data.Title);
 };
 
 movieSearch.addEventListener('click', inputEventHandler);
@@ -54,7 +58,7 @@ function rapidAPI(imdbData) {
 	fetch(rapidRequestUrl, options)
 		.then(function (response) {
 			if (response.status !=200) {
-				alert(respnse.status);
+				alert(response.status);
 			} else {
 				return response.json();
 			}
@@ -140,3 +144,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+  
+
+
+
+
+function getWatchList() {
+    document.getElementById("currentMovieList").innerHTML = null;
+    var currentWatchList = JSON.parse(localStorage.getItem("watchList"));
+    console.log(currentWatchList);
+    if (currentWatchList) {
+        for (var movie of currentWatchList) {
+            var newCard = document.createElement("article");
+            newCard.setAttribute("class", "media box");
+            newCard.innerHTML = `
+            <figure class="media-left">
+                 <p class="image is-128x128">
+                <img id="posterImage" src="${movie.poster}" alt="movie img">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p id="titleOfMovie">
+                    <strong>${movie.title}</strong>
+                    </p>
+                    <p id="movieDescription">
+                    ${movie.plot}
+                    </p>
+                </div>
+            </div>
+                <div class="media-right">
+                <button class="delete"></button>
+            </div>
+            `
+            document.getElementById("currentMovieList").appendChild(newCard);
+        }
+    }
+}
+
+getWatchList();
+addBtn.addEventListener("click", addMovie);
