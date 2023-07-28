@@ -33,7 +33,7 @@ function displayMovies(data) {
     var moviePoster = data.Poster;
     var movieDesc = data.Plot;
     document.getElementById("moviePoster").src = moviePoster;
-    document.getElementById("description").innerHTML = "<p>" + movieDesc + "</p>";
+    document.getElementById("description").textContent =  movieDesc ;
     addBtn.setAttribute("data-poster", data.Poster);
     addBtn.setAttribute("data-plot", data.Plot);
     addBtn.setAttribute("data-title", data.Title);
