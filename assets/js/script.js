@@ -137,7 +137,7 @@ function getWatchList() {
             newCard.setAttribute("class", "media box");
             newCard.innerHTML = `
             <figure class="media-left">
-                 <p class="image is-128x128">
+                 <p class="image is-64x64">
                 <img id="posterImage" src="${movie.poster}" alt="movie img">
                 </p>
             </figure>
