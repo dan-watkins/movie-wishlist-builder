@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie Wishlist</title>
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://kit.fontawesome.com/e0d0d5f37f.js" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
-
 </head>
-
 <body>
   <header>
-   
     <nav class="navbar is-link siteHeader" role="navigation" aria-label="main navigation">
-
       <div>
         <p class="navbar-item has-text-white is-size-2">Reelly</p>
-
       </div>
-             
           <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
 
-          <div class="navbar-menu" id="navMenu">
-           
+        <div class="navbar-menu" id="navMenu">   
             <a id="currentMovieList" class="mr-5 has-text-black">List 1</a>
-         
-          </div>
-       
+        </div>
+          <div id="navbarBasicExample" class="navbar-end">
+            <div class="navbar-start">    
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Movie List
+                </a>
+        
+                <div class="navbar-dropdown" id="currentMovieList2">
+                </div>
+              </div>
+         </div>
     </nav>
   </header>
   <section class="section columns box m-3">
@@ -103,23 +103,12 @@
 
 
  <div class="columns">
-    
-
-
-
-    
     <section class="results card m-5">
-
-
       <div class="columns">
-
         <img id="moviePoster" class="column poster m-2" src="assets/images/popcorn.jpg"
           alt="movie poster">
-
-
         <div id="description" class="column description">
           <p>Search and save movies that lets you see what streaming services host the movie.</p>
-
           <div class="icon-text is-flex is-flex-wrap-nowrap">
             <span></span>
             <span class="">
@@ -127,35 +116,24 @@
             </span>
           </div>
         </div>
-
         <div id="trailer" class="column trailer">
           <div>
             <a href="https://www.youtube.com/watch?v=zAGVQLHvwOY">Watch trailer</a>
             <button id="addMovie">Add to list</button>
           </div>
         </div>
-
       </div>
-
     </section>
     </section>
   </div>
-
-
   </section>
   </div>
-
-
 </body>
 <footer>
-
 </footer>
-
-
 <script src="https://kit.fontawesome.com/a7404b1ef7.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script src="./assets/js/script.js"></script>
 </body>
-
 </html>
