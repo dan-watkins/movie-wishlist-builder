@@ -14,8 +14,13 @@
 .description  {
     margin: 1rem;
     padding: 1rem;
+    font-family: "Gill Sans", sans-serif;
+    
 }
 
+.media-content {
+    font-family: "Gill Sans", sans-serif;
+}
 
 
 /* .description span {
