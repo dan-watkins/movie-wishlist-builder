@@ -109,16 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function closeModal($el) {
     $el.classList.remove('is-active');
-      // get the iframe within this modal
-  const iframe = $el.querySelector('iframe');
-
-  // store the current src of the iframe
-  const iframeSrc = iframe.src;
-
-  // setting src to empty will stop the video
-  iframe.src = '';
-
-  iframe.src = iframeSrc;
+      const iframe = $el.querySelector('iframe');
+      const iframeSrc = iframe.src;
+      // When modal is closed video stops
+      iframe.src = ''
+      // Then gives the src back
+      iframe.src = iframeSrc;
   }
 
   function closeAllModals() {
