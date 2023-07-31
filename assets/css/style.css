@@ -2,7 +2,7 @@
 
 .siteHeader {
     font-family: 'Limelight', cursive;
-    background-image: url(file://assets/images/header1.jpg);
+    background-image: url(/assets/images/header1.jpg);
 }
 
 .poster {
