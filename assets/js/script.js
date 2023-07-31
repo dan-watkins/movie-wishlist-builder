@@ -71,7 +71,8 @@ function rapidAPI(imdbData) {
         if (imdbData.imdbID == movieId) {
           console.log(data.result[i]);
           displayStreamInfo(data.result[i]);
-          return;
+          addTrailer(movieId)
+          return  ;
         } else {
           console.log("no streaming results found");
         }
@@ -79,6 +80,13 @@ function rapidAPI(imdbData) {
     });
 }
 
+
+  function addTrailer(movieId){
+    var modalTrailer = document.getElementById('modal-trailer')
+    var trailerId = movieId.
+
+  }
+//  console.log(movieId)
 // hamburger
 document.addEventListener("DOMContentLoaded", () => {
   // Get all "navbar-burger" elements
