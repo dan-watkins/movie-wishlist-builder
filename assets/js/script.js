@@ -81,11 +81,17 @@ function trailerInfo(data) {
     document.getElementById("trailer").src = "https://www.youtube.com/embed/" + videoId
 }
 
-const streamInfo = document.getElementById("streamInfo");
-let newListItem = document.createElement('li');
-newListItem.textContent = 'Netflix';
+function displayStreamInfo(data) {
+    var services =  Object.keys(data.streamingInfo.us)
+    const streamInfo = document.getElementById("streamInfo");
+    for (let i = 0; i < services.length; i++) {
+        let newListItem = document.createElement('li');
+        console.log(services[i])
+        newListItem.textContent = services[i];
+        streamInfo.appendChild(newListItem);
+    }
+}
 
-streamInfo.appendChild(newListItem);
 
 // hamburger
 document.addEventListener("DOMContentLoaded", () => {
