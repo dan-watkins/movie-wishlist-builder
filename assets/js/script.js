@@ -76,6 +76,17 @@ function rapidAPI(imdbData) {
     });
 }
 
+function trailerInfo(data) {
+    var videoId = data.youtubeTrailerVideoId
+    document.getElementById("trailer").src = "https://www.youtube.com/embed/" + videoId
+}
+
+const streamInfo = document.getElementById("streamInfo");
+let newListItem = document.createElement('li');
+newListItem.textContent = 'Netflix';
+
+streamInfo.appendChild(newListItem);
+
 // hamburger
 document.addEventListener("DOMContentLoaded", () => {
   // Get all "navbar-burger" elements
