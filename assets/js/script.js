@@ -68,6 +68,7 @@ function rapidAPI(imdbData) {
                 if (imdbData.imdbID == movieId) {
                     console.log(data.result[i]);
                     displayStreamInfo(data.result[i]);
+                    trailerInfo(data.result[i])
                     return;
                 } else {
                     console.log("no streaming results found");
@@ -76,11 +77,18 @@ function rapidAPI(imdbData) {
         });
 }
 
-function trailerInfo(data) {
+
+
+function trailerInfo(movie) {
     var modalTrailer = document.getElementById("modal-trailer")
     modalTrailer.src = ""
-    var videoId = data.youtubeTrailerVideoId
-    modalTrailer.src = "https://www.youtube.com/embed/" + videoId
+   
+
+       
+        var videoId = movie.youtubeTrailerVideoId
+        modalTrailer.src = `https://www.youtube.com/embed/${videoId}` 
+        console.log(modalTrailer)
+   
 }
 
 function displayStreamInfo(data) {
