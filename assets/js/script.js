@@ -92,7 +92,8 @@ function displayStreamInfo(data) {
     var services = Object.keys(data.streamingInfo.us)
     const streamInfo = document.getElementById("streamInfo");
     let newListItem = document.createElement('li');
-    newListItem.textContent = 'Available On';
+    newListItem.className = 'is-size-4, has-text-weight-bold'
+    newListItem.textContent = 'Available On:';
     streamInfo.appendChild(newListItem);
     for (let i = 0; i < services.length; i++) {
         let newListItem = document.createElement('li');
