@@ -1,5 +1,5 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html class="has-background-light"  lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
+<body class="has-background-light">
   <header>
     <nav class="navbar is-link siteHeader" role="navigation" aria-label="main navigation">
       <div>
-        <p class="navbar-item has-text-white is-size-2">Reelly</p>
+        <p class="navbar-item has-text-white is-size-1">Reelly</p>
       </div>
           <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
@@ -27,7 +27,7 @@
           <div id="navbarBasicExample" class="navbar-end">
             <div class="navbar-start">    
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
+                <a class="navbar-link has-text-white">
                   Movie List
                 </a>
         
@@ -37,7 +37,7 @@
          </div>
     </nav>
   </header>
-  <section class="section columns box m-3">
+  <section class="section columns box m-2 ">
     <div class="column">
       <input class="input is-normal" type="text" id="input-search" placeholder=" Movie Title...">
     </div>
@@ -102,7 +102,7 @@
   </section>
 
 
- <div class="columns">
+ <div class="columns ">
     <section class="results card m-5">
       <div class="columns">
         <img id="moviePoster" class="column poster m-2" src="assets/images/popcorn.jpg"
@@ -113,11 +113,7 @@
           <p id="description">Search and save movies that lets you see what streaming services host the movie.</p>
 
           <div class="icon-text is-flex is-flex-wrap-nowrap">
-            <span></span>
-            <span class="">
-              <i class=""></i>
-            </span>
-          </div>
+         
         
 
           <div id="trailer" class="modal trailer">
@@ -126,13 +122,16 @@
             <div class="modal-content">
               <div class="box image is-16by9">
                 <iframe id="modal-trailer" class="has-ratio" width="640" height="360"
-                src="https://www.youtube.com/embed/SbXIj2T-_uk" frameborder="0" allowfullscreen></iframe>
+                src="https://www.youtube.com/embed/SbXIj2T-uk" frameborder="0" allowfullscreen></iframe>
                 </iframe>
               </div>
             </div>
           
             <button class="modal-close is-large" aria-label="close"></button>
           </div>
+          <ul id="streamInfo">
+            <li>Available On</li>
+          </ul>
           <button class="js-modal-trigger" data-target="trailer">
             Watch Trailer
           </button>
@@ -147,7 +146,7 @@
   </section>
   </div>
 </body>
-<footer>
+<footer >
 </footer>
 <script src="https://kit.fontawesome.com/a7404b1ef7.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"
