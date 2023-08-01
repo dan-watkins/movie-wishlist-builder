@@ -37,3 +37,10 @@
 .trailer a {
     display: block;
 }
+
+@media only screen and (min-width: 992px) {
+
+    .navbar {
+        padding-right: 6.7rem;
+    }
+}
