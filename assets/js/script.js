@@ -82,12 +82,9 @@ function rapidAPI(imdbData) {
 function trailerInfo(movie) {
     var modalTrailer = document.getElementById("modal-trailer")
     modalTrailer.src = ""
-   
-
-       
-        var videoId = movie.youtubeTrailerVideoId
-        modalTrailer.src = `https://www.youtube.com/embed/${videoId}` 
-        console.log(modalTrailer)
+    var videoId = movie.youtubeTrailerVideoId
+    modalTrailer.src = `https://www.youtube.com/embed/${videoId}` 
+    console.log(modalTrailer)
    
 }
 
