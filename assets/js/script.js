@@ -84,6 +84,9 @@ function trailerInfo(data) {
 function displayStreamInfo(data) {
     var services = Object.keys(data.streamingInfo.us)
     const streamInfo = document.getElementById("streamInfo");
+    let newListItem = document.createElement('li');
+    newListItem.textContent = 'Available On';
+    streamInfo.appendChild(newListItem);
     for (let i = 0; i < services.length; i++) {
         let newListItem = document.createElement('li');
         console.log(services[i])
