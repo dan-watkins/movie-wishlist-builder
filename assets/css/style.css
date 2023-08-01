@@ -2,7 +2,7 @@
 
 .siteHeader {
     font-family: 'Limelight', cursive;
-    background-image: url(https://github.com/dan-watkins/movie-wishlist-builder/blob/main/assets/Images/header1.jpg);
+    background-image: url(/assets/images/header1.jpg);
 }
 
 .poster {
