@@ -43,7 +43,7 @@
     <div class="column">
       <button class="button" type="submit" id="movie-search">Search</button>
     </div>
-    <div class="dropdown is-hoverable column">
+    <!-- <div class="dropdown is-hoverable column">
       <div class="dropdown-trigger">
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
           <span>Genre</span>
@@ -97,7 +97,7 @@
           </a>
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 
 
@@ -115,14 +115,36 @@
               
             </ul>
 
-          </div>         
-        </div>
-        <div id="trailer" class="column trailer">
-          <div>
-            <a href="#">Watch trailer</a>
-            <button id="addMovie">Add to list</button>
+
+        <div  class="column description">
+          <p id="description">Search and save movies that lets you see what streaming services host the movie.</p>
+
+          <div class="icon-text is-flex is-flex-wrap-nowrap">
+         
+        
+
+          <div id="trailer" class="modal trailer">
+            <div class="modal-background"></div>
+          
+            <div class="modal-content">
+              <div class="box image is-16by9">
+                <iframe id="modal-trailer" class="has-ratio" width="640" height="360"
+                src="https://www.youtube.com/embed/Lxz66ri5sOI" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          
+            <button class="modal-close is-large" aria-label="close"></button>
           </div>
-        </div>
+          <ul id="streamInfo">
+            <li>Available On</li>
+          </ul>
+          <button class="js-modal-trigger" data-target="trailer">
+            Watch Trailer
+          </button>
+          <button id="addMovie">Add to list</button>
+            
+          </div>
+
       </div>
     </section>
     </section>

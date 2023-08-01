@@ -68,6 +68,7 @@ function rapidAPI(imdbData) {
                 if (imdbData.imdbID == movieId) {
                     console.log(data.result[i]);
                     displayStreamInfo(data.result[i]);
+                    trailerInfo(data.result[i])
                     return;
                 } else {
                     console.log("no streaming results found");
@@ -76,9 +77,15 @@ function rapidAPI(imdbData) {
         });
 }
 
-function trailerInfo(data) {
-    var videoId = data.youtubeTrailerVideoId
-    document.getElementById("trailer").src = "https://www.youtube.com/embed/" + videoId
+
+
+function trailerInfo(movie) {
+    var modalTrailer = document.getElementById("modal-trailer")
+    modalTrailer.src = ""
+    var videoId = movie.youtubeTrailerVideoId
+    modalTrailer.src = `https://www.youtube.com/embed/${videoId}` 
+    console.log(modalTrailer)
+   
 }
 
 function displayStreamInfo(data) {
@@ -117,6 +124,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+  document.addEventListener('DOMContentLoaded', () => {
+  // Functions to open and close a modal
+  function openModal($el) {
+    $el.classList.add('is-active');
+  }
+
+  function closeModal($el) {
+    $el.classList.remove('is-active');
+      const iframe = $el.querySelector('iframe');
+      const iframeSrc = iframe.src;
+      // When modal is closed video stops
+      iframe.src = ''
+      // Then gives the src back
+      iframe.src = iframeSrc;
+  }
+
+  function closeAllModals() {
+    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+      closeModal($modal);
+    });
+  }
+
+
+  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
+
+    $trigger.addEventListener('click', () => {
+      openModal($target);
+    });
+  });
+
+  
+  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+    const $target = $close.closest('.modal');
+
+    $close.addEventListener('click', () => {
+      closeModal($target);
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.code === 'Escape') {
+      closeAllModals();
+    }
+  });
+});
+  
 function addMovie(event) {
     var currentMovies = JSON.parse(localStorage.getItem("watchList")) || [];
     var newMovie = {
