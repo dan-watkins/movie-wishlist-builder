@@ -13,7 +13,7 @@ function inputEventHandler() {
 
 function omdbApi() {
   var omdbRequestUrl =
-    "http://www.omdbapi.com/?apikey=c7e37d76&t=" + movieTitle.value;
+    "https://www.omdbapi.com/?apikey=c7e37d76&t=" + movieTitle.value;
   fetch(omdbRequestUrl)
     .then(function (response) {
       if (response.status != 200) {
