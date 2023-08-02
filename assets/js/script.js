@@ -91,6 +91,7 @@ function trailerInfo(movie) {
 function displayStreamInfo(data) {
   var services = Object.keys(data.streamingInfo.us);
   const streamInfo = document.getElementById("streamInfo");
+  streamInfo.textContent = " ";
   let newListItem = document.createElement("li");
   newListItem.className = "is-size-4, has-text-weight-bold";
   newListItem.textContent = "Available On:";
