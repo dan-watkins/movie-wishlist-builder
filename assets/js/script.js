@@ -5,7 +5,7 @@ var addBtn = document.getElementById("addMovie");
 
 function inputEventHandler() {
   if (!movieTitle.value) {
-    window.alert("please input value");
+    showModal()
   } else {
     omdbApi(movieTitle.value);
   }
@@ -57,8 +57,11 @@ function rapidAPI(imdbData) {
   fetch(rapidRequestUrl, options)
     .then(function (response) {
       if (response.status != 200) {
+        
         alert(response.status);
-      } else {
+
+      } 
+      else {
         return response.json();
       }
     })
@@ -72,6 +75,10 @@ function rapidAPI(imdbData) {
         }
       }
     });
+}
+function showModal() {
+  var modal = document.getElementById("choose-input"); 
+  modal.classList.add("is-active"); 
 }
 
 function trailerInfo(movie) {
