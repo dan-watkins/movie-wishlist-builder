@@ -3,21 +3,23 @@ var movieSearch = document.getElementById("movie-search");
 var results = document.getElementsByClassName("results");
 var addBtn = document.getElementById("addMovie");
 
+// checks the movie title search for a value
 function inputEventHandler() {
   if (!movieTitle.value) {
-    showModal()
+    inputModal()
   } else {
     omdbApi(movieTitle.value);
   }
 }
 
+// checks IMDB data and sends to streaming service for availability
 function omdbApi() {
   var omdbRequestUrl =
     "https://www.omdbapi.com/?apikey=c7e37d76&t=" + movieTitle.value;
   fetch(omdbRequestUrl)
     .then(function (response) {
       if (response.status != 200) {
-        alert(response.status);
+        showModal(response.status);
       } else {
         return response.json();
       }
@@ -29,6 +31,7 @@ function omdbApi() {
   return;
 }
 
+// displays IMDB information in the main section
 function displayMovies(data) {
   var moviePoster = data.Poster;
   var movieDesc = data.Plot;
@@ -39,8 +42,7 @@ function displayMovies(data) {
   addBtn.setAttribute("data-title", data.Title);
 }
 
-movieSearch.addEventListener("click", inputEventHandler);
-
+// headers for rapid response / availability api
 const options = {
   method: "GET",
   headers: {
@@ -49,6 +51,7 @@ const options = {
   },
 };
 
+// api to get streaming availability for the movie, then adds data to main display
 function rapidAPI(imdbData) {
   var rapidRequestUrl =
     "https://streaming-availability.p.rapidapi.com/v2/search/title?title=" +
@@ -58,7 +61,7 @@ function rapidAPI(imdbData) {
     .then(function (response) {
       if (response.status != 200) {
         
-        alert(response.status);
+        showModal(response.status);
 
       } 
       else {
@@ -76,11 +79,21 @@ function rapidAPI(imdbData) {
       }
     });
 }
-function showModal() {
-  var modal = document.getElementById("choose-input"); 
-  modal.classList.add("is-active"); 
+
+// shows modal if no movie title has been input
+function inputModal() {
+  var input = document.getElementById("choose-input"); 
+  input.classList.add("is-active"); 
 }
 
+
+function showModal() {
+  var modal = document.getElementById("api-input"); 
+  modal.classList.add("is-active"); 
+  modal.textContent = "Something went wrong. Please try again."
+}
+
+// plays movie trailer from search
 function trailerInfo(movie) {
   var modalTrailer = document.getElementById("modal-trailer");
   modalTrailer.src = "";
@@ -88,6 +101,7 @@ function trailerInfo(movie) {
   modalTrailer.src = `https://www.youtube.com/embed/${videoId}`;
 }
 
+// creates streaming availability on main display
 function displayStreamInfo(data) {
   var services = Object.keys(data.streamingInfo.us);
   const streamInfo = document.getElementById("streamInfo");
@@ -177,6 +191,7 @@ function addMovie(event) {
   }
 }
 
+// shows saved movies in local storage
 function getWatchList() {
   document.getElementById("currentMovieList").innerHTML = null;
   document.getElementById("currentMovieList2").innerHTML = null;
@@ -212,6 +227,7 @@ function getWatchList() {
   }
 }
 
+// on button click removes saved movie from list
 function deleteMovie(event) {
   var currentWatchList = JSON.parse(localStorage.getItem("watchList"));
   var element = event.target;
@@ -228,5 +244,7 @@ function deleteMovie(event) {
 }
 
 getWatchList();
+
+movieSearch.addEventListener("click", inputEventHandler);
 document.addEventListener("click", deleteMovie);
 addBtn.addEventListener("click", addMovie);
