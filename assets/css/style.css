@@ -1,5 +1,3 @@
-
-
 .siteHeader {
     font-family: 'Limelight', cursive;
     background-image: url(/assets/images/header1.jpg);
@@ -8,30 +6,21 @@
 .poster {
     margin: 0 auto;
     width: 280px;
-    
 }
 
-.description  {
+.description {
     margin: 1rem;
     padding: 1rem;
     font-family: "Gill Sans", sans-serif;
-    
 }
 
 .media-content {
     font-family: "Gill Sans", sans-serif;
 }
 
-
-/* .description span {
-    color: rgb(18, 219, 18); 
-} */
-
-
 .trailer button {
-    margin:  1rem auto;
+    margin: 1rem auto;
     width: 30%;
-    
 }
 
 .trailer a {
@@ -39,7 +28,6 @@
 }
 
 @media only screen and (min-width: 992px) {
-
     .navbar {
         padding-right: 6.7rem;
     }
